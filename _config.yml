@@ -1,7 +1,7 @@
 title: "AWS CI/CD Deployment"
 description: "Setting up a Continuous Integration and Continuous Deployment pipeline for a web application using AWS services."
 
-remote_theme: pages-themes/cayman@v0.3.0
+remote_theme: jekyll-theme-cayman@0.1.0
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
