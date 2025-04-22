@@ -1,41 +1,34 @@
-version: 2.1
+title: "AWS CI/CD Deployment"
+description: "Setting up a Continuous Integration and Continuous Deployment pipeline for a web application using AWS services."
 
-jobs:
-  setup_beanstalk:
-    docker:
-      - image: circleci/python:3.8
-    steps:
-      - checkout
-      - run:
-          name: "**Setting up Elastic Beanstalk for Deployment**"
-          command: echo "Setting up AWS Elastic Beanstalk"
+remote_theme: pages-themes/cayman@v0.3.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-feed
 
-  setup_codepipeline:
-    docker:
-      - image: circleci/python:3.8
-    steps:
-      - checkout
-      - run:
-          name: "**Setting up CodePipeline for Deployment**"
-          command: echo "Setting up AWS CodePipeline"
+show_downloads: false
 
-  deployment_success:
-    docker:
-      - image: circleci/python:3.8
-    steps:
-      - checkout
-      - run:
-          name: "**Successfully Implemented**"
-          command: echo "Deployment pipeline successfully implemented"
+# Author details
+author:
+  name: Pavithra
 
-workflows:
-  version: 2
-  deploy:
-    jobs:
-      - setup_beanstalk
-      - setup_codepipeline:
-          requires:
-            - setup_beanstalk
-      - deployment_success:
-          requires:
-            - setup_codepipeline
+# Repository info
+repository: amie2001/aws-ci-cd
+
+# Optional footer or intro
+footer_text: >
+  👉 To know more about this project, visit the 
+  [GitHub repository](https://github.com/amie2001/aws-ci-cd)
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Build excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
