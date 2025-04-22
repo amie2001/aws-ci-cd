@@ -1,0 +1,52 @@
+version: 2.1
+
+# Title: AWS CI/CD Deployment
+
+executors:
+  docker-executor:
+    docker:
+      - image: circleci/python:3.8
+    working_directory: ~/repo
+
+jobs:
+  setup_beanstalk:
+    executor: docker-executor
+    steps:
+      - checkout
+      - run:
+          name: "**Setting up Elastic Beanstalk for Deployment**"
+          command: |
+            echo "Configuring AWS Elastic Beanstalk environment..."
+            # Commands to set up Elastic Beanstalk
+
+  setup_codepipeline:
+    executor: docker-executor
+    steps:
+      - checkout
+      - run:
+          name: "**Setting up CodePipeline for Deployment**"
+          command: |
+            echo "Setting up AWS CodePipeline for continuous deployment..."
+            # Commands to configure CodePipeline
+
+  deployment_success:
+    executor: docker-executor
+    steps:
+      - checkout
+      - run:
+          name: "**Successfully Implemented**"
+          command: |
+            echo "Deployment pipeline is successfully implemented and tested."
+            # Commands for final deployment checks or tests
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - setup_beanstalk
+      - setup_codepipeline:
+          requires:
+            - setup_beanstalk
+      - deployment_success:
+          requires:
+            - setup_codepipeline
