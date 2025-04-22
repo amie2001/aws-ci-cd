@@ -18,18 +18,18 @@ This project demonstrates how to set up a continuous delivery pipeline for a sim
 5. **Finalize Pipeline**: Add a review stage and test the pipeline.
 
    
-SETTING UP ELASTIC BEANSTALK FOR DEPLOYMENT
+## SETTING UP ELASTIC BEANSTALK FOR DEPLOYMENT
 
 ![BEANSTALK SETUP](asset/beanstalk.png)
 
 
 
-SETTING UP CODEPIPELINE FOR DEPLOYMENT 
+## SETTING UP CODEPIPELINE FOR DEPLOYMENT 
 
 ![CODE PIPELINE SETUP](asset/codepipeline.png)
 
 
 
-PIPELINE SUCCESSFULLY EXECUTED
+## PIPELINE SUCCESSFULLY EXECUTED
 
 ![PIPELINE SUCCESSFULLY EXECUTED ](asset/result.png)
