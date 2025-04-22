@@ -16,14 +16,18 @@ This project demonstrates how to set up a continuous delivery pipeline for a sim
 3. **Create Build Project**: Configure AWS CodeBuild to build the app.
 4. **Create Delivery Pipeline**: Automate build and deploy with AWS CodePipeline.
 5. **Finalize Pipeline**: Add a review stage and test the pipeline.
+Setting up Elastic beanstalk for deployment
 
- 
-Setting up Elastic beanstalk for deployment 
 ![BEANSTALK SETUP](asset/beanstalk.png)
 
 
+
 Setting up codepipeline for deployment
+
 ![CODE PIPELINE SETUP](asset/codepipeline.png)
 
+
+
 Pipeline Successfully Executed
+
 ![PIPELINE SUCCESSFULLY EXECUTED ](asset/result.png)
